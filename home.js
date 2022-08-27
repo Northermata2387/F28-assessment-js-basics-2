@@ -23,11 +23,10 @@
 
 //CODE HERE
 const greetUser = (username) => {
-    // console.log(`Welcome back, ${username}`)
+    return `Welcome back, ${username}`
 }
 
-greetUser('Kevin Heart')
-
+// console.log(greetUser('Kevin'))
 
 
 //////////////////PROBLEM 2////////////////////
@@ -50,21 +49,22 @@ greetUser('Kevin Heart')
         // `You're in our delivery zone!`
 */
 
-// const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-//CODE HERE
-// const canWeDeliver = zipCode => {
-//     if ( i = 0, i < zipCode.length, i++) {
-//         if (zipCode[i] === canWeDeliver())
-//         zipCode === false
-//         console.log( 'Address outside of delivery area' )
-//     } else { 
-//         zipCode === true
-//         console.log( 'We can deliver to you!' )
+// //CODE HERE
+// const canWeDeliver = (zipCode) => {
+//     for(let i = 0; i < deliveryAreaZipCodes.length; i++){
+//         if(deliveryAreaZipCodes[i] === zipCode){
+//             return "You are eligible for delivery"
+//         }
 //     }
+
+//     return "Sorry, we can't deliver to that address"
 // }
 
-// canWeDeliver(80220)
+// console.log(canWeDeliver(85203))
+// console.log(canWeDeliver(55555))
+
 
 
 /* 
@@ -85,8 +85,17 @@ greetUser('Kevin Heart')
 */
 
 // CODE HERE
-// const canWeDeliver = deliveryAreaZipCodes.includes(80220)
-// console.log(canWeDeliver)
+const canWeDeliverTwo = (zipCode) => {
+    if(deliveryAreaZipCodes.includes(zipCode)){
+        return "You are in the delivery area"
+    } else {
+        return "Outside of the delivery area"
+    }
+
+}
+
+// console.log(canWeDeliverTwo(80220))
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -122,12 +131,12 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
-// const dealDown = deals.replace((title) => deals.title)
-// title('10% off!')
-// console.log(dealDown)
+// CODE HERE //
+// console.log(deals[0].title)
 
-// console.log(deals.title.replace('10% off!'))
+// deals[0].title = deals[0].title.replace('15%', '10%')
+
+// console.log(deals[0].title)
 
 
 /*
@@ -143,9 +152,9 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE// 
-// const dealDown = deals.replace((title) => deals.title)
-// title('10% off!')
-// console.log(dealDown)
+// CODE HERE //
+// console.log(deals[1].desc)
 
-// console.log(deals.title.replace('10% off!')
+// deals[1].desc = deals[1].desc.trim().replace('March!', 'April!')
+
+// console.log(deals[1].desc)

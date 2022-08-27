@@ -32,6 +32,14 @@
 
 //CODE HERE
 
+const pizza = {
+    name: 'Three Cheese',
+    price: 10,
+    category: 'entree',
+    popularity: 4,
+    rating: 5,
+    tags: ['favorite', 'kids', 'vegetarian'] 
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +52,7 @@
 
 //CODE HERE
 
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,6 +62,8 @@
 */
 
 //CODE HERE
+
+// console.log(pizza.tags[1])
 
 
 /*
@@ -64,6 +75,8 @@
 
 //CODE HERE
 
+// let {price} = pizza
+// console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,6 +86,8 @@
 */
 
 //CODE HERE
+// let {category} = pizza
+// console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,6 +103,48 @@
 */
 
 //CODE HERE
+const foodArr = [
+    {
+        name: 'Three Cheese', 
+        price: 18.95, 
+        category: 'Pizza', 
+        popularity: 1, 
+        rating: 4.7, 
+        tags: ['customer favorite', 'kids', 'White Sauce', 'vegetarian']
+    }, 
+    {
+        name: 'Pesto Chicken Pasta', 
+        price: 12.95, 
+        category: 'Pasta', 
+        popularity: 5, 
+        rating: 4, 
+        tags: ['customer favorite', 'vegetarian']
+    }, 
+    {
+        name: 'Chicken Ceasar Salad', 
+        price: 7.99, 
+        category: 'Salad', 
+        popularity: 3, 
+        rating: 4.4, 
+        tags: ['gluten-free', 'vegetarian']
+    }, 
+    {
+        name: 'Cheesecake', 
+        price: 7.95, 
+        category: 'dessert', 
+        popularity: 1, 
+        rating: 5.0, 
+        tags: ['customer favorite', 'kids', 'vegetarian']
+    }, 
+    {
+        name: 'Garlic Bread', 
+        price: 4.95, 
+        category: 'appetizer', 
+        popularity: 4, 
+        rating: 4.6, 
+        tags: ['customer favorite', 'kids', 'vegetarian']
+    }
+]
 
 
 
@@ -104,10 +161,13 @@
 */
 
 //CODE HERE
+// const filteredFood = foodArr.filter((food) => {
+//     if(food.tags.includes('kids')){
+//         return food
+//     }
+// })
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+// console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -150,6 +210,18 @@
 
 //CODE HERE
 
+// const filterByProperty = (property, number, type) => {
+//     const filteredFood = foodArr.filter((food) => {
+//         if(type === 'above'){
+//             return food[property] >= number
+//         }else{
+//             return food[property] <= number
+//         }
+//     })
+
+//     return filteredFood
+// }
+
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +231,5 @@
 */
 
 //CODE HERE
+
+// console.log(filterByProperty('popularity', 3, 'below'))
